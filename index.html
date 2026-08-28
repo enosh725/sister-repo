@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Precious Sister ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#08090d;
+    color:#fff;
+    font-family:'Montserrat',sans-serif;
+    overflow-x:hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(255,180,200,.12),transparent 30%),
+        radial-gradient(circle at 80% 70%,rgba(180,160,255,.10),transparent 30%);
+    pointer-events:none;
+    z-index:-2;
+}
+
+.stars{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    opacity:.5;
+    animation:twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle{
+    0%,100%{opacity:.2;transform:scale(.8)}
+    50%{opacity:1;transform:scale(1.5)}
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+    position:relative;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.small-title{
+    text-transform:uppercase;
+    letter-spacing:6px;
+    font-size:11px;
+    color:#d9a7b7;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(65px,11vw,145px);
+    font-weight:500;
+    line-height:.85;
+    background:linear-gradient(90deg,#fff,#e9b7c8,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero h2{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:400;
+    font-size:clamp(25px,4vw,48px);
+    margin-top:25px;
+    color:#e8dce1;
+}
+
+.hero p{
+    max-width:650px;
+    margin:30px auto;
+    color:#aaa7ae;
+    line-height:1.9;
+    font-size:15px;
+}
+
+/* ================= BUTTON ================= */
+
+.magic-btn{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    padding:17px 35px;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:100px;
+    background:rgba(255,255,255,.06);
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:2px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.magic-btn::before{
+    content:"";
+    position:absolute;
+    left:-100%;
+    top:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);
+    transition:.6s;
+}
+
+.magic-btn:hover::before{
+    left:100%;
+}
+
+.magic-btn:hover{
+    transform:translateY(-5px);
+    border-color:#d9a7b7;
+    box-shadow:0 15px 40px rgba(210,140,170,.2);
+}
+
+/* ================= SECTION ================= */
+
+section{
+    min-height:100vh;
+    padding:120px 7%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.section-label{
+    color:#d5a3b6;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:10px;
+    margin-bottom:20px;
+}
+
+.section-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(48px,7vw,90px);
+    font-weight:500;
+    margin-bottom:25px;
+}
+
+.section-description{
+    max-width:700px;
+    color:#aaa7ae;
+    line-height:1.9;
+}
+
+/* ================= SPECIAL MENU ================= */
+
+.special{
+    text-align:center;
+}
+
+.special .section-description{
+    margin:auto;
+}
+
+.explore-grid{
+    max-width:1000px;
+    margin:60px auto 0;
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.explore-card{
+    min-height:220px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:25px;
+    background:rgba(255,255,255,.035);
+    backdrop-filter:blur(15px);
+    padding:35px 25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:.5s;
+    cursor:pointer;
+}
+
+.explore-card:hover{
+    transform:translateY(-10px);
+    border-color:#d9a7b7;
+    background:rgba(255,255,255,.07);
+}
+
+.explore-card .number{
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;
+    color:#d9a7b7;
+}
+
+.explore-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    margin:15px 0;
+}
+
+.explore-card p{
+    color:#8f8d94;
+    font-size:12px;
+}
+
+/* ================= LETTER ================= */
+
+.letter-section{
+    background:
+        linear-gradient(rgba(8,9,13,.86),rgba(8,9,13,.95)),
+        url("YOUR_SISTER_PHOTO.jpg") center/cover;
+}
+
+.letter{
+    max-width:850px;
+    margin:auto;
+    padding:60px;
+    border:1px solid rgba(255,255,255,.13);
+    background:rgba(10,10,15,.65);
+    backdrop-filter:blur(20px);
+    border-radius:30px;
+}
+
+.letter h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:55px;
+    margin-bottom:30px;
+}
+
+.letter p{
+    color:#b9b5ba;
+    line-height:2;
+    margin-bottom:20px;
+}
+
+/* ================= PHOTO ================= */
+
+.photo-section {
+  text-align: center;
+}
+
+.photo-frame {
+  width: min(100%, 80%);
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.photo-frame img {
+  display: block;
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  opacity: 0.9;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ================= SCRATCH MEMORY CARDS ================= */
+
+.scratch-memory{
+    position:relative;
+    overflow:hidden;
+    border-radius:25px;
+    aspect-ratio:1 / 1;
+    background:#17131d;
+    box-shadow:0 8px 30px rgba(0,0,0,.35);
+}
+
+.scratch-memory img{
+    display:block;
+    width:100% !important;
+    height:100% !important;
+    max-height:none;
+    object-fit:cover;
+    border:0;
+    border-radius:0;
+}
+
+.scratch-memory canvas{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    cursor:crosshair;
+    touch-action:none;
+}
+
+.scratch-memory.revealed canvas{
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .7s ease;
+}
+
+.photo-caption{
+    margin-top:20px;
+    color:#aaa;
+    font-family:'Cormorant Garamond',serif;
+    font-size:25px;
+}
+
+/* ================= LOVE CARDS ================= */
+
+.cards{
+    max-width:1100px;
+    width:100%;
+    margin:50px auto 0;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.love-card{
+    padding:40px;
+    min-height:230px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.1);
+    background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
+    transition:.4s;
+}
+
+.love-card:hover{
+    transform:scale(1.02);
+    border-color:#c990a5;
+}
+
+.love-card span{
+    font-size:12px;
+    color:#d9a7b7;
+    letter-spacing:3px;
+}
+
+.love-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:38px;
+    margin:15px 0;
+}
+
+.love-card p{
+    color:#99979e;
+    line-height:1.8;
+}
+
+/* ================= FUTURE ================= */
+
+.future{
+    text-align:center;
+}
+
+.future-grid{
+    max-width:1000px;
+    width:100%;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.future-box{
+    padding:30px 15px;
+    border-top:1px solid #54434b;
+}
+
+.future-box .year{
+    color:#d9a7b7;
+    font-size:12px;
+    letter-spacing:3px;
+}
+
+.future-box h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;
+    margin:15px 0;
+}
+
+.future-box p{
+    color:#85838a;
+    font-size:12px;
+    line-height:1.7;
+}
+
+/* ================= FAMILY ================= */
+
+.family{
+    text-align:center;
+    background:radial-gradient(circle at center,rgba(120,60,80,.12),transparent 50%);
+}
+
+.family-message{
+    max-width:900px;
+    margin:50px auto;
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(35px,5vw,65px);
+    line-height:1.3;
+    color:#eee;
+}
+
+/* ================= FINAL ================= */
+
+.final{
+    text-align:center;
+    min-height:100vh;
+}
+
+.final-heart{
+    font-size:70px;
+    animation:heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.15)}
+}
+
+.final h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(60px,10vw,120px);
+    font-weight:500;
+    margin:20px;
+}
+
+.final p{
+    color:#99979e;
+    max-width:650px;
+    margin:auto;
+    line-height:2;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:50px 20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#77747b;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+    .explore-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .future-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .letter{
+        padding:30px;
+    }
+
+    section{
+        padding:90px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="small-title">
+A little surprise for someone very special
+</div>
+
+<h1>My Sister</h1>
+
+<h2>More precious than words can say.</h2>
+
+<p>
+Some people enter our lives and become memories.
+But a sister becomes a part of who we are.
+This little place is made only for you.😍
+</p>
+
+<a href="#special" class="magic-btn">
+✨ BEGIN THE SURPRISE
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= SPECIAL ================= -->
+
+<section class="special" id="special">
+
+<div class="section-label"></div>
+
+<h2 class="section-title">
+There are a few things<br>I want to share with you.
+</h2>
+
+
+<div class="explore-grid">
+
+<a href="#letter" class="explore-card">
+<h3>A Letter</h3>
+<p>Something I've always wanted to say.</p>
+</a>
+
+<a href="#memories" class="explore-card">
+<h3>Our Memories</h3>
+<p>The moments I never want to forget.</p>
+</a>
+
+<a href="#love" class="explore-card">
+<h3>Why You're Special</h3>
+<p>The little things that make you you.</p>
+</a>
+
+<a href="#future" class="explore-card">
+<h3>Your Future</h3>
+<p>The life I hope you create.</p>
+</a>
+
+
+<a href="#final" class="explore-card">
+<h3>One Last Surprise</h3>
+<p>Save this one for the end.</p>
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= LETTER ================= -->
+
+<section class="letter-section" id="letter">
+
+<div class="letter">
+
+<div class="section-label"> From My Heart</div>
+
+<h2>Dear Sister💓</h2>
+
+<p>
+I don't always say it, but you are incredibly precious to me.
+There are so many things I appreciate about you that cannot
+fit into a simple message.
+</p>
+
+<p>
+We've laughed, argued, annoyed each other and shared countless
+little moments. Somehow, all those ordinary moments became
+some of my favourite memories.
+</p>
+
+<p>
+As life moves forward, things will change. We will grow,
+follow our dreams and create our own futures.
+But one thing I hope never changes is the love and respect
+we have for each other.
+</p>
+
+<p>
+Whenever you feel lost, remember that you have someone
+who believes in you.
+Whenever you achieve something, know that I will be proud.
+And whenever life becomes difficult, you will never have
+to face it completely alone.
+</p>
+
+<p>
+<strong>
+Happy Raksha Bandhan, my sister. ❤️
+</strong>
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ================= MEMORIES ================= -->
+
+<section class="photo-section" id="memories">
+
+<div class="section-label"> Memories</div>
+
+<h2 class="section-title">
+Moments I Would Keep Forever.
+</h2>
+
+<div class="photo-frame">
+
+<div class="photo-gallery" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;">
+<img src="brother2.png" alt="Our Memory 1" style="width:100%; height:80%;">
+<img src="sister2.1.png" alt="Our Memory 2" style="width:100%; height:80%;">
+<img src="brother4.1.png" alt="Our Memory 3" style="width:100%; height:80%;">
+<img src="sister4.png" alt="Our Memory 4" style="width:100%; height:80%;">
+<img src="sister5.png" alt="Our Memory 5" style="width:100%; height:80%;">
+<img src="sister6.1.png" alt="Our Memory 6" style="width:100%; height:80%;">
+</div>
+<div class="photo-caption">
+“Some memories become priceless simply because you were there.”
+</div>
+
+</div>
+
+<a href="#love" class="magic-btn">
+CONTINUE ✦
+</a>
+
+</section>
+
+<!-- ================= LOVE ================= -->
+
+<section id="love">
+
+<div class="section-label"> You</div>
+
+<h2 class="section-title">
+Why You Are Precious To Me.
+</h2>
+
+<div class="cards">
+
+<div class="love-card">
+<span>LOVE</span>
+<h3>You are family.</h3>
+<p>
+No matter where life takes us, the bond between us
+will always have a place in my heart.
+</p>
+</div>
+
+<div class="love-card">
+<span>CARE</span>
+<h3>Your happiness matters.</h3>
+<p>
+I may not always show it, but I genuinely want you
+to be happy, safe and successful.
+</p>
+</div>
+
+<div class="love-card">
+<span>RESPECT</span>
+<h3>I believe in you.</h3>
+<p>
+Your dreams belong to you. I hope you always have
+the courage to follow them.
+</p>
+</div>
+
+<div class="love-card">
+<span>PRIDE</span>
+<h3>Make your own story.</h3>
+<p>
+I don't want you to become someone else.
+I want you to become the strongest version of yourself.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FUTURE ================= -->
+
+<section class="future" id="future">
+
+<div class="section-label"> Your Future</div>
+
+<h2 class="section-title">
+I Hope Your Future Is Beautiful.
+</h2>
+
+<p class="section-description" style="margin:auto">
+Dream bigger than you think you can.
+Work for what you want.
+And never forget the values that brought our family this far.
+</p>
+
+</section>
+
+<!-- ================= FINAL ================= -->
+
+<section class="final" id="final">
+
+<div class="final-heart">
+❤️
+</div>
+
+<div class="section-label">
+The Last Surprise
+</div>
+
+<h1>
+You Are<br>
+Very Precious To Me.
+</h1>
+
+<p>
+Years from now, when we look back at our lives,
+I hope we remember the laughter, the fights,
+the celebrations and all the ordinary moments
+that secretly meant everything.
+</p>
+
+<br><br>
+
+<a href="#top" class="magic-btn" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+↻ EXPERIENCE IT AGAIN
+</a>
+
+</section>
+
+
+<footer>
+
+MADE WITH LOVE FOR MY SISTER ❤️
+<br><br>
+RAKSHA BANDHAN • 2026
+
+</footer>
+
+
+<script>
+
+/* CREATE STARS */
+
+const stars = document.getElementById("stars");
+
+for(let i=0;i<120;i++){
+
+    const star=document.createElement("div");
+
+    star.className="star";
+
+    star.style.left=Math.random()*100+"%";
+    star.style.top=Math.random()*100+"%";
+
+    star.style.animationDelay=(Math.random()*4)+"s";
+
+    stars.appendChild(star);
+
+}
+
+/* Turn every memory photo into a colourful scratch-to-reveal card. */
+document.querySelectorAll(".photo-gallery img").forEach(image => {
+
+    const card = document.createElement("div");
+    card.className = "scratch-memory";
+    image.parentNode.insertBefore(card, image);
+    card.appendChild(image);
+
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    card.appendChild(canvas);
+
+    const resize = () => {
+        const scale = window.devicePixelRatio || 1;
+        canvas.width = card.clientWidth * scale;
+        canvas.height = card.clientHeight * scale;
+        context.setTransform(scale, 0, 0, scale, 0, 0);
+        const gradient = context.createLinearGradient(0, 0, card.clientWidth, card.clientHeight);
+        gradient.addColorStop(0, "#ff4d8d");
+        gradient.addColorStop(.32, "#ffb347");
+        gradient.addColorStop(.62, "#6c63ff");
+        gradient.addColorStop(1, "#21d4fd");
+        context.fillStyle = gradient;
+        context.fillRect(0, 0, card.clientWidth, card.clientHeight);
+        context.fillStyle = "rgba(255,255,255,.9)";
+        context.font = "600 13px Montserrat, sans-serif";
+        context.textAlign = "center";
+        context.fillText("SCRATCH TO REVEAL", card.clientWidth / 2, card.clientHeight / 2);
+    };
+
+    requestAnimationFrame(resize);
+    window.addEventListener("resize", resize);
+
+    let scratched = 0;
+    const scratch = event => {
+        const point = event.touches ? event.touches[0] : event;
+        const box = canvas.getBoundingClientRect();
+        context.globalCompositeOperation = "destination-out";
+        context.beginPath();
+        context.arc(point.clientX - box.left, point.clientY - box.top, 25, 0, Math.PI * 2);
+        context.fill();
+        scratched++;
+        if(scratched > 35) card.classList.add("revealed");
+    };
+
+    canvas.addEventListener("pointerdown", event => {
+        canvas.setPointerCapture(event.pointerId);
+        scratch(event);
+    });
+    canvas.addEventListener("pointermove", event => {
+        if(event.buttons) scratch(event);
+    });
+
+});
+
+
+/* REVEAL ANIMATION */
+
+const observer = new IntersectionObserver(
+entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},
+{threshold:.15}
+);
+
+document.querySelectorAll(
+".explore-card,.love-card,.future-box,.letter,.photo-frame"
+).forEach(el=>{
+
+el.style.opacity="0";
+el.style.transform="translateY(35px)";
+el.style.transition="opacity .8s ease, transform .8s ease";
+
+observer.observe(el);
+
+});
+
+</script>
+
+</body>
+</ht
